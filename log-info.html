@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="">
+	    <meta name="keywords" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta content="telephone=no" name="format-detection" />
+		<meta content="email=no" name="format-detection" />
+	    <title>物流信息</title>
+	  	<!-- Set render engine for 360 browser -->
+	  	<meta name="renderer" content="webkit">
+	  	<link href="css/common.css" rel="stylesheet" />
+	  	<link href="css/logistics.css" rel="stylesheet" />
+	</head>
+	<body class="l-logB">
+		<header class="l-head">
+			<i class="l-logo"><img src="images/logo.png" alt="logo" /></i>
+			<h1 class="l-head-tit">查看物流信息</h1>
+		</header>
+		<section class="l-dispatch">
+			<ul class="l-dis-list">
+				<li><i>物流状态：</i><em>小件员正在配送</em></li>
+				<li><i>承运公司：</i>棒棒达快递</li>
+				<li><i>　运单号：</i>BBD186861166</li>
+				<li><i>客服电话：</i><em>400-8345690</em></li>
+			</ul>
+		</section>
+		<!-- S 订单轨迹 -->
+		<section class="l-bod l-line">
+			<h2 class="l-sub-tit">订单轨迹</h2>
+			<a href="log-area.html">
+				<div class="l-map" id="allmap">
+				
+				</div>
+			</a>
+			
+		</section>
+		<!-- E 订单轨迹 -->
+		
+		<!-- S 物流信息 -->
+		<section class="l-bod l-log-info">
+			<h2 class="l-sub-tit">物流信息</h2>
+			<div class="l-log-box">
+				<ul class="l-logList">
+					<li class="l-logList-cur clearfix">
+						<div class="clearfix">
+							<i></i>
+							<div class="l-logList-con">
+								<span class="l-detail-time">2016-10-20 17:56:57</span>
+								<span class="l-detail-info">订单已被拒收，拒收原因：收件人拒收退回</span>
+							</div>
+						</div>
+						<div class="l-bodB"></div>
+					</li>
+					<li class="clearfix">
+						<div class="clearfix">
+							<i></i>
+							<div class="l-logList-con">
+								<span class="l-detail-time">2016-10-20 09:13:59</span>
+								<span class="l-detail-info">配送员正在为您派件，配送员电话：胡俊  <em class="c-orange">15361823239</em></span>
+							</div>
+						</div>
+						<div class="l-bodB"></div>
+					</li>
+					<li class="clearfix">
+						<div class="clearfix">
+							<i></i>
+							<div class="l-logList-con">
+								<span class="l-detail-time">2016-10-20 09:13:31</span>
+								<span class="l-detail-info">订单已送达【平湖站】，正在分派配送员</span>
+							</div>
+						</div>
+						<div class="l-bodB"></div>
+					</li>
+					<li class="clearfix">
+						<div class="clearfix">
+							<i></i>
+							<div class="l-logList-con">
+								<span class="l-detail-time">2016-10-20 04:24:31</span>
+								<span class="l-detail-info">司机已取货，正在送往【平湖站】。司机电话：史美伦    <em class="c-orange">15019802413</em></span>
+							</div>
+						</div>
+						<div class="l-bodB"></div>
+					</li>
+					<li class="clearfix">
+						<div class="clearfix">
+							<i></i>
+							<div class="l-logList-con">
+								<span class="l-detail-time">2016-10-20 09:13:59</span>
+								<span class="l-detail-info">订单已打包，待司机取货。分拣员电话：刘传舌</span>
+							</div>
+						</div>
+						<div class="l-bodB"></div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- E 物流信息 -->
+		<script type="text/javascript">
+			//百度地图API功能
+			function loadJScript() {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "http://api.map.baidu.com/api?v=2.0&ak=RG9sITlO9QH88Q5m8kzp9DMqeYOd9cGq&callback=init";
+				document.body.appendChild(script);
+			}
+			function init() {
+				// 百度地图API功能
+				var map = new BMap.Map("allmap");
+				var point = new BMap.Point(116.423188,39.919000);
+				map.centerAndZoom(point, 15);
+				map.enableScrollWheelZoom();
+				
+				var myIconPos = new BMap.Icon("images/post_icon.png", new BMap.Size(24,32));
+            		var marker2 = new BMap.Marker(new BMap.Point(116.423188,39.919000),{icon:myIconPos});
+				//label
+            		var opts = {
+                  position : new BMap.Point(116.423188,39.919000),    // 指定文本标注所在的地理位置
+                  offset   : new BMap.Size(-30, -50)    //设置文本偏移量
+                }
+                var label = new BMap.Label("发货地", opts);  // 创建文本标注对象
+
+                label.setStyle({
+                     color : "#fff",
+                     border : "0",
+                     fontSize : "18px",
+                     fontFamily:"simhei",   
+                     backgroundColor:"rgba(4, 4, 4,0.7)",
+                 });
+                map.addOverlay(marker2);
+	     		addHoverLabel(label,marker2) 
+	     		function addHoverLabel(label,marker2){
+			    		marker2.addEventListener("click",function(){
+				    		map.addOverlay(label);  
+				    })
+			    		
+			    }
+			}  
+			window.onload = loadJScript;  //异步加载地图
+		
+    	</script>
+	</body>
+</html>

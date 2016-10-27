@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="">
+	    <meta name="keywords" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta content="telephone=no" name="format-detection" />
+		<meta content="email=no" name="format-detection" />
+	    <title>订单轨迹</title>
+	  	<!-- Set render engine for 360 browser -->
+	  	<meta name="renderer" content="webkit">
+	  	<link href="css/common.css" rel="stylesheet" />
+	  	<link href="css/logistics.css" rel="stylesheet" />
+	  	
+	  	<script src="js/jquery-2.1.4.min.js"></script>
+	  	<script src="js/logistics.js"></script>
+	</head>
+	<body class="l-logB">
+		<header class="l-head">
+			<i class="l-back" onclick="history.back()"></i>
+			<h1 class="l-head-tit">订单轨迹</h1>
+		</header>
+		<section>
+			<div class="l-map-area">
+				<div class="l-mapF" id="allmap"></div>
+				<div class="pos-adr"></div>
+			</div>
+		</section>
+		<script type="text/javascript">
+			//百度地图API功能
+			function loadJScript() {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "http://api.map.baidu.com/api?v=2.0&ak=RG9sITlO9QH88Q5m8kzp9DMqeYOd9cGq&callback=init";
+				document.body.appendChild(script);
+			}
+			function init() {
+				// 百度地图API功能
+				var map = new BMap.Map("allmap");
+				var point = new BMap.Point(116.423188,39.919000);
+				map.centerAndZoom(point, 15);
+				map.enableScrollWheelZoom();
+				// S 增加的控件 
+
+				var bottom_left_navigation = new BMap.NavigationControl({
+					anchor: BMAP_ANCHOR_BOTTOM_LEFT, type: BMAP_NAVIGATION_CONTROL_ZOOM}); //左下角，仅包含缩放按钮
+
+				map.addControl(bottom_left_navigation);
+				// E 增加的控件 
+				
+				
+				var myIconPos = new BMap.Icon("images/post_icon.png", new BMap.Size(24,32));
+            		var marker2 = new BMap.Marker(new BMap.Point(116.423188,39.919000),{icon:myIconPos});
+				//label
+            		var opts = {
+                  position : new BMap.Point(116.423188,39.919000),    // 指定文本标注所在的地理位置
+                  offset   : new BMap.Size(-30, -50)    //设置文本偏移量
+                }
+                var label = new BMap.Label("发货地", opts);  // 创建文本标注对象
+
+                label.setStyle({
+                     color : "#fff",
+                     border : "0",
+                     fontSize : "18px",
+                     fontFamily:"simhei",   
+                     backgroundColor:"rgba(4, 4, 4,0.7)",
+                 });
+                map.addOverlay(marker2);
+	     		addHoverLabel(label,marker2) 
+	     		function addHoverLabel(label,marker2){
+			    		marker2.addEventListener("click",function(){
+				    		map.addOverlay(label);  
+				    })
+			    		
+			    }
+			}  
+			window.onload = loadJScript;  //异步加载地图
+		
+    	</script>
+	</body>
+</html>

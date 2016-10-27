@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="">
+	    <meta name="keywords" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta content="telephone=no" name="format-detection" />
+		<meta content="email=no" name="format-detection" />
+	    <title>验证码</title>
+	  	<!-- Set render engine for 360 browser -->
+	  	<meta name="renderer" content="webkit">
+	  	
+	  	<link href="css/common.css" rel="stylesheet" />
+	  	<link href="css/logistics.css" rel="stylesheet" />
+	  	<script src="js/jquery-2.1.4.min.js"></script>
+	  	<script src="js/logistics.js"></script>
+	</head>
+	<body class="l-i-body">
+		<header class="l-head">
+			<i class="l-i-logo"><img src="images/l_logo.png" alt="logo" /></i>
+		</header>
+		<section class="l-i-con">
+			<img src="images/l_bg.png" />
+			<div class="l-i-box">
+				<div class="l-i-tip">
+					为了您的信息安全，请输入验证码，查询物流详情
+				</div>
+				<div class="l-i-checkB">
+					<span class="l-i-tel"><i></i>15210210890</span>
+					<span class="l-i-input clearfix">
+						<input type="text" class="l-i-code" placeholder="输入验证码" />
+						<input type="button" class="l-i-time j-time" value="60S" onclick="settime(this)" />
+					</span>
+					<span class="l-i-but">查询</span>
+				</div>
+			</div>
+				
+		</section>
+	</body>
+</html>

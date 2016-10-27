@@ -1,0 +1,411 @@
+@charset "utf-8";
+i,em{
+	font-style:normal;
+}
+img{
+	max-width:100%;
+	width:100%;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: #fff;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+  color: #6c6c6b;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #6c6c6b;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #6c6c6b;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #6c6c6b;
+}
+*{
+	box-sizing:border-box;
+}
+body{
+	font-size:1em;
+    font-size:10px;
+    min-width:300px;
+     /*max-width:750px;
+    margin:0 auto;*/
+}
+.c-orange{
+	color:#ffaa00;
+}
+.l-head{
+	height:48px;
+	background:#ffcc00;
+	position:relative;
+}
+
+/* S index */
+.l-i-body{
+	background:#fae0ae;
+}
+.l-i-logo{
+	display:block;
+	width:85px;
+	height:25px;
+	position:absolute;
+	left:10px;
+	top:11px;
+}
+.l-i-con{
+	position:relative;
+}
+.l-i-box{
+	position:absolute;
+	top:19.84%;
+	width:100%;
+	
+}
+.l-i-tip{
+    width:329px;
+    height:78px;
+    margin:0 auto;
+    text-align:center;
+    font-size:2em;
+    padding:12px 50px;
+    line-height:26px;
+    background:url(../images/l_tipbg.png) no-repeat;
+    background-size:100%;
+    color:#33333d;
+}
+.l-i-checkB{
+	margin:11px 17px 0 19px;
+	padding:19px 27px; 
+	background:#fff;
+	border-radius:10px;
+	box-shadow:4px 4px 0 #ff9c00;
+}
+.l-i-checkB span{
+	display:block;
+}
+.l-i-tel{
+	font-size:1.7em;
+	color:#ff9c00;
+}
+.l-i-tel i{
+	display:inline-block;
+	width:13px;
+	height:18px;
+	background:url(../images/l_tel.png) no-repeat;
+	background-size:100%;
+	vertical-align:middle;
+	margin:-2px 11px 0 0 ;
+}
+.l-i-input{
+	margin-top:18px;
+}
+.l-i-code{
+	width:63.0714%;
+	height:43px;
+	line-height:1.1;
+	padding:12px 0 12px 22px;
+	border:none;
+	border:1px solid #33333d;
+	border-radius:4px;
+	padding-left:22px;
+	font-size:1.9em;
+	float:left;
+}
+.l-i-time{
+	display:block;
+	width:31.5714%;
+	height:43px;
+	line-height:43px;
+	text-align:center;
+	background:none;
+	border:none;
+	-webkit-appearance: none;
+	background:#92929c;
+	border-radius:4px;
+	float:right;
+	color:#dbdbe3;
+	margin-left:10px;
+	font-size:1.7em;
+	cursor:pointer;
+}
+.l-i-time[disabled]{
+	background:#92929c;
+	opacity:0.8;
+}
+.l-i-but{
+	height:45px;
+	line-height:45px;
+	background:#ffcc00;
+	border-radius:22px;
+	box-shadow:0 3px 0 #ff9c00;
+	font-size:2.2em;
+	text-align:center;
+	margin-top:29px;
+	cursor:pointer;
+}
+@media screen and (max-width: 750px){
+	.l-i-code{
+		padding:18px 0 14px 22px;
+	}
+} 
+@media screen and (max-width: 320px){
+    .l-i-tip{
+	    	width:284px;
+	    height:67px;
+	    font-size:1.6em;
+	    padding:8px 50px;
+	}
+	.l-i-time{
+		font-size:1.6em;
+	}
+}
+/* E index */
+
+/* S 物流信息 */
+.l-logB{
+	background:#f5f5f5;
+}
+.l-logo{
+	display:block;
+	width:27px;
+	height:26px;
+	position:absolute;
+	left:15px;
+	top:11px;
+}
+.l-head-tit{
+	text-align:center;
+	color:#33333d;
+	font-size:1.9em;
+	font-weight:normal;
+	line-height:48px;
+}
+.l-dispatch{
+	padding:15px;
+	font-size:1.6em;
+	background:#fff;
+	border-bottom:1px solid #b1b1b5;
+}
+.l-dis-list li{
+	color:#303030;
+	line-height:1.1;
+	padding-bottom:15px;
+}
+.l-dis-list li:last-child{
+	padding-bottom:0;
+}
+.l-dis-list li i{
+	color:#85888d;
+}
+.l-dis-list li em{
+	color:#ffaa00;
+}
+.l-bod{
+	border:1px solid #b1b1b5;
+	border-left:none;
+	border-right:none;
+	background:#fff;
+}
+.l-line{
+	margin:10px 0;
+	padding:15px;
+}
+.l-sub-tit{
+	font-weight:normal;
+	font-size:1.7em;
+	color:#303030;
+	line-height:1.1;
+}
+.l-map{
+	width:100%;
+	height:156px;
+	margin-top:15px;
+	border-radius:6px;
+	border:1px solid #ccc;
+}
+
+.l-log-info{
+	padding:15px 0 15px 15px;
+}
+.l-logList{
+	margin:15px 0 15px 21px;
+	
+}
+.l-logList li{
+	border-left:1px solid #b1b1b5;
+	color:#9b9da1;
+	padding-bottom:15px;
+}
+
+.l-logList li i{
+	display:block;
+	width:8px;
+	height:8px;
+	background:#b1b1b5;
+	border-radius:50%;
+	margin-left:-4px;
+	float:left;
+}
+.l-logList .l-logList-cur i{
+	background:#ffaa00;
+	position:relative;
+}
+.l-logList .l-logList-cur i:before{
+	content:" ";
+	display:block; 
+	width:12px;
+	height:12px;
+	background:#ffaa00;
+	opacity:0.6;
+	border-radius:50%;
+	position:absolute; 
+	left:-2px;
+	top:-2px;
+}
+.l-logList .l-logList-cur .l-detail-info{
+	color:#303030;
+}
+.l-logList-con{
+	width:98%;
+	padding:0 10px 0 20px;
+	float:left;
+}
+.l-logList-con span{
+	display:block;
+	font-size:1.3em;
+}
+.l-detail-info{
+	padding-top:6px;
+}
+.l-detail-time{
+	line-height:1.1;
+}
+.l-bodB{
+	border-bottom:1px solid #acb2be;
+	margin-left:20px;
+	padding-top:10px;
+}
+.l-logList li:last-child{
+	padding-bottom:0;
+	border:none;
+}
+.l-logList li:last-child .l-bodB{
+	border:none;
+}
+/* E 物流信息 */
+
+/* S 订单轨迹 */
+.l-back{
+	display:block;
+	width:9px;
+	height:15px;
+	background:url(../images/l_return.png) no-repeat;
+	background-size:100%;
+	position:absolute;
+	left:40px;
+	top:16px;
+}
+.l-mapF{
+	width:100%;
+}
+/* E 订单轨迹 */
+
+
+/* S 控件css reset */
+
+
+.l-map-area .BMap_stdMpZoom{
+    width:34px !important;
+    height:78px !important;
+    top:-78px !important;
+    background:none !important;
+}
+.l-map-area .BMap_stdMpZoom .BMap_button{
+    background:none !important;
+    width:34px !important;
+    height:34px !important;
+    left:0 !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+.l-map-area .BMap_stdMpZoom .BMap_stdMpZoomIn{
+	 width:34px !important;
+    height:34px !important;
+    background:url(../images/plus_icon.png) no-repeat  !important;
+    background-size:100%  !important;
+    margin-bottom:10px;
+}
+.l-map-area .BMap_stdMpZoom .BMap_stdMpZoomOut{
+	width:34px !important;
+    height:34px !important;
+    background:url(../images/minus_icon.png) no-repeat  !important;
+    background-size:100%  !important;
+    top:39px !important;
+}
+.l-map-area .BMap_smcbg{
+	background:none !important;
+	width:34px !important;
+    height:34px !important;
+}
+.l-map-area .BMap_stdMpType1{
+    bottom:32px !important;
+    height:126px !important;
+}
+.l-map-area .BMap_stdMpPan .BMap_button{
+    width:4px !important;
+    height:4px !important;
+}
+.l-map-area .BMap_panN{
+    top:7px !important;
+}
+.l-map-area .BMap_panW{
+    left:7px !important;
+    top:13px !important;
+}
+.l-map-area .BMap_panE{
+    left:inherit !important;
+    right:7px !important;
+    top:13px !important;
+}
+.l-map-area .BMap_panS{
+    top:inherit !important;
+    bottom:7px !important;
+}
+.l-map-area .BMap_noprint{
+	height:54px !important;
+}
+.BMapLabel{
+    max-width:inherit;
+    margin-bottom:0;
+    border-radius:4px;
+    padding:6px !important;
+}
+.BMapLabel:after {
+    content: '';
+    display: block;/*这个也很关键的*/
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: -6px;
+    left:32px;
+    /*left: 50%;
+    margin-left:-6px;*/
+    border: 6px solid transparent;
+    border-top: 6px solid rgba(4, 4, 4,0.7);
+    border-bottom: none;
+    z-index: 1;
+}
+.pos-adr{
+    position:absolute;
+    bottom:15px;
+    left:10px;
+    width:34px;
+    height:34px;
+    background:url(../images/pos_icon.png) no-repeat;
+    background-size:100%;
+    cursor:pointer;
+}
+ /* E 控件css reset */
+
