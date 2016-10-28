@@ -218,6 +218,9 @@ body{
 	color:#303030;
 	line-height:1.1;
 }
+.l-line a{
+	display:block;
+}
 .l-map{
 	width:100%;
 	height:156px;
