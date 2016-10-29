@@ -30,11 +30,14 @@
 		<!-- S 订单轨迹 -->
 		<section class="l-bod l-line">
 			<h2 class="l-sub-tit">订单轨迹</h2>
-			<a href="log-area.html" class="l-line-a">
+			<div class="l-pos">
+				<a href="log-area.html" class="l-pos-a"></a>
 				<div class="l-map" id="allmap">
 				
 				</div>
-			</a>
+			</div>
+				
+			
 			
 		</section>
 		<!-- E 订单轨迹 -->
@@ -134,6 +137,7 @@
 	     		function addHoverLabel(label,marker2){
 			    		marker2.addEventListener("click",function(){
 				    		map.addOverlay(label);  
+				    		
 				    })
 			    		
 			    }

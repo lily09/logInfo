@@ -71,6 +71,7 @@
 	     		addHoverLabel(label,marker2) 
 	     		function addHoverLabel(label,marker2){
 			    		marker2.addEventListener("click",function(){
+			    			console.log(this.getIcon().imageUrl);
 				    		map.addOverlay(label);  
 				    })
 			    		
