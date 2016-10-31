@@ -8,7 +8,7 @@ $(function(){
 	function mapHei(){
 		var winhei=$(window).height();
 		$(".l-mapF").css({height:winhei-48});
-		var tipE=$(".l-i-tip span");
+		var tipE=$(".l-i-tip .tx-info");
 		var tipHei=tipE.height();
 		$(".l-i-tip .tx").css({height:tipHei+60});
 		tipE.css({marginTop:-(tipHei)/2})
@@ -21,7 +21,7 @@ $(function(){
 })
 // S 倒计时
 settime(".j-time");
-var countdown=4; 
+var countdown=60; 
 function settime(obj) {
     if (countdown == 0) { 
         $(obj).removeAttr("disabled"); 

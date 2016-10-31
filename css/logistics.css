@@ -76,8 +76,7 @@ body{
     margin:0 auto;
     position:relative;
 }
-.l-i-tip span{
-	display:block;
+.l-i-tip .tx-info{
 	width:80%;
 	position:absolute;
 	top:50%;
@@ -85,7 +84,6 @@ body{
     margin-left: -40%;
 }
 .tx{
-	height:78px;
 	padding:20px;
 	transform:rotateX(45deg);
 	background:#fae0ae;
