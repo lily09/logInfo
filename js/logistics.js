@@ -8,10 +8,6 @@ $(function(){
 	function mapHei(){
 		var winhei=$(window).height();
 		$(".l-mapF").css({height:winhei-48});
-		var tipE=$(".l-i-tip .tx-info");
-		var tipHei=tipE.height();
-		$(".l-i-tip .tx").css({height:tipHei+60});
-		tipE.css({marginTop:-(tipHei)/2})
 	};
 	// E 地图高度
 	

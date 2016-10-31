@@ -18,28 +18,23 @@
 	  	<script src="js/logistics.js"></script>
 	</head>
 	<body class="l-i-body">
-		<header class="l-head">
-			<i class="l-i-logo"><img src="images/l_logo.png" alt="logo" /></i>
-		</header>
+		<i class="l-i-logo"><img src="images/l_logo.png" alt="logo" /></i>
 		<section class="l-i-con">
 			<img src="images/l_bg.png" />
 			<div class="l-i-box">
-				<div class="l-i-tip">
-					<div class="tx">
-						
-					</div>
-					<div class="tx-info">为了您的信息安全，请输入验证码，查询物流详情</div>
-				</div>
+				<span class="l-i-tip">亲爱的用户：</span>
+				<span class="l-i-tip">查询实时物流信息，请输入验证码</span>
 				<div class="l-i-checkB">
 					<span class="l-i-tel"><i></i>15210210890</span>
 					<span class="l-i-input clearfix">
 						<input type="text" class="l-i-code" placeholder="输入验证码" />
 						<input type="button" class="l-i-time j-time" value="60S" onclick="settime(this)" />
 					</span>
-					<span class="l-i-but j-search">查询</span>
+					<span class="l-i-but j-search" onclick="javascript:window.location.href='log-info.html'">查询</span>
 				</div>
+				<span class="l-i-safe">棒棒达快递承诺您的全部信息安全，请放心使用哦</span>
 			</div>
-				
+			
 		</section>
 		<div class="l-prompt">
 			<i class="l-prompt-txt">验证码错误</i>

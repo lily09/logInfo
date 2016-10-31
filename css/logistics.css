@@ -3,7 +3,6 @@ i,em{
 	font-style:normal;
 }
 img{
-	max-width:100%;
 	width:100%;
 }
 
@@ -12,16 +11,16 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #fff;
 }
 input::-webkit-input-placeholder { /* WebKit browsers */
-  color: #6c6c6b;
+  color: #8d8d8b;
 }
 input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #6c6c6b;
+  color: #8d8d8b;
 }
 input::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #6c6c6b;
+  color: #8d8d8b;
 }
 input:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color: #6c6c6b;
+  color: #8d8d8b;
 }
 *{
 	box-sizing:border-box;
@@ -53,47 +52,34 @@ body{
 	position:absolute;
 	left:10px;
 	top:11px;
+	z-index:1;
 }
 .l-i-con{
 	position:relative;
 }
 .l-i-box{
 	position:absolute;
-	top:19.84%;
+	top:20.4647%;
 	width:100%;
-	
+}
+.l-i-tip,.l-i-safe{
+	display:block;
+	line-height:1.1;
 }
 .l-i-tip{
-	width:95%;
-    perspective:600px;
-	padding:0 25px;
-    text-align:center;
-    font-size:2em;
-    line-height:26px;
-    /*background:url(../images/l_tipbg.png) no-repeat;
-    background-size:100%;*/
-    color:#33333d;
-    margin:0 auto;
-    position:relative;
+	font-size:1.5em;
+	color:#7f764f;
+	margin:0 0 8px 31px;
 }
-.l-i-tip .tx-info{
-	width:80%;
-	position:absolute;
-	top:50%;
-	left: 50%;
-    margin-left: -40%;
-}
-.tx{
-	padding:20px;
-	transform:rotateX(45deg);
-	background:#fae0ae;
-	border-radius:10px;
-	box-shadow:4px 4px 0 #ff9c00;
+.l-i-safe{
+	margin:0 18px;
+	text-align:center;
+	font-size:1.2em;
+	color:#33333d;
 }
 .l-i-checkB{
-	width:95%;
-	margin:11px auto;
-	padding:19px 27px; 
+	margin:0 18px 51px;
+	padding:19px 27px 33px; 
 	background:#fff;
 	border-radius:10px;
 	box-shadow:4px 4px 0 #ff9c00;
@@ -123,10 +109,11 @@ body{
 	line-height:1.1;
 	padding:12px 0 12px 22px;
 	border:none;
-	border:1px solid #33333d;
+	border:1px solid #c8c8c8;
+	color:#8d8d8b;
 	border-radius:4px;
 	padding-left:22px;
-	font-size:1.9em;
+	font-size:1.7em;
 	float:left;
 }
 .l-i-time{
@@ -203,9 +190,12 @@ body{
 	}
 } 
 @media screen and (max-width: 320px){
-   
 	.l-i-time{
 		font-size:1.6em;
+	}
+	.l-i-checkB{
+		margin:0 18px 40px;
+		
 	}
 }
 /* E index */
